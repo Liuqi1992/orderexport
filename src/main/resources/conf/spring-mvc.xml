@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+    
+    <!-- 扫描controller（controller层注入） -->
+   <context:component-scan base-package="com.order.controller"/>
+   
+   <!-- 避免IE在ajax请求时，返回json出现下载 -->
+   <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">		
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- 定义文件上传解析器 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设定默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="5242880"></property>
+    </bean>
+
+    <!-- *********quartz配置(开单统计)start********** -->
+
+    <!-- 要调用的类 -->
+    <bean id="quartzJob" class="com.order.controller.QuartzStat"/>
+    <!-- 定义调用对象和调用方法 -->
+    <bean id="jobtask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 要调用的类 -->
+        <property name="targetObject" ref="quartzJob"/>
+        <!-- 要调用类中方法 -->
+        <property name="targetMethod" value="work"/>
+    </bean>
+
+    <!-- 定义触发时间 -->
+    <bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="jobtask"/>
+        <!-- 配置时间 每天23:50 -->
+        <property name="cronExpression" value="0 50 23 * * ?"/>
+    </bean>
+
+    <!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序  -->
+    <bean id="startQuertz" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTime"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- *********quartz配置(开单统计)end********** -->
+
+    <!-- *********quartz配置(用户年龄设定)start********** -->
+
+    <!-- 要调用的类 -->
+    <bean id="quartzUpdateAge" class="com.order.controller.QuartzUpdateAge"/>
+    <!-- 定义调用对象和调用方法 -->
+    <bean id="updateAgeTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 要调用的类 -->
+        <property name="targetObject" ref="quartzUpdateAge"/>
+        <!-- 要调用类中方法 -->
+        <property name="targetMethod" value="work"/>
+    </bean>
+
+    <!-- 定义触发时间 -->
+    <bean id="doTime2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="updateAgeTask"/>
+        <!-- 配置时间 每天23:50 -->
+        <property name="cronExpression" value="0 10 0 1 * ?"/>
+    </bean>
+
+    <!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序  -->
+    <bean id="startQuertzAge" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTime2"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- *********quartz配置(用户年龄设定)end********** -->
+
+    <!-- 对模型视图添加前后缀 -->
+     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
+      p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/>
+
+    <!-- 在实际开发中通常都需配置 mvc:annotation-driven标签,这个标签是开启注解 -->
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.order.controller.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!-- 静态资源访问  -->
+  <mvc:resources location="/images/" mapping="/img/**"/>
+  <mvc:resources location="/js/" mapping="/js/**"/>
+  <mvc:resources location="/css/" mapping="/css/**"/>
+ </beans>

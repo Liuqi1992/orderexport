@@ -1,0 +1,354 @@
+ @charset "utf-8";
+/* CSS Document */
+.nr {
+	width: 1200px;
+	padding-top: 70px!important;
+	margin: 0 auto;
+}
+
+
+.nr .frg {
+	font-family: "宋体";
+	float: left;
+	width: 160px;
+}
+
+.nr .jyuiq {
+	float: left;
+	background: #FFF;
+	border-left: 1px solid #d9dadc;
+	border-right: 1px solid #d9dadc;
+	border-bottom: 1px solid #d9dadc;
+	height: auto;
+	width: 185px;
+}
+.nr .jyuiq ul {
+	float: left;
+	overflow: hidden;
+	width: 100%;
+}
+
+.nr .memugg{
+		width:100%;
+		float:left;
+		overflow:hidden;
+		margin-bottom:10px;
+		background:#FFF;
+		border-radius:7px; 
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		border:1px solid #e7e7e7;
+		height:auto;
+		}
+
+.nr .jyuiq ul li .ad {
+	float: left;
+	line-height: 44px;
+	text-indent: 56px;
+	width: 99%;
+	border-top: 1px solid #d9dadc;
+	height: 44px;
+	color: #585858;
+	font-size: 12px;
+	float: left;
+	width: 100%;
+}
+.nr .jyuiq ul li .adbj1:hover {
+	color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 0;
+}
+.nr .jyuiq ul li .adbj2:hover {
+	color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -35px;
+}
+.nr .jyuiq ul li .adbj3:hover {
+	color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -70px;
+}
+.nr .jyuiq ul li .adbj4:hover {
+	color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -105px;
+}
+.nr .jyuiq ul li .adbj5:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .adbj6:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -185px;
+}
+.nr .jyuiq ul li .adbj7:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -360px;
+}
+.nr .jyuiq ul li .adbj8:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .adbj9:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj10:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .adbj11:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -407px;
+}
+.nr .jyuiq ul li .adbj12:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -453px;
+}
+.nr .jyuiq ul li .adbj13:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .adbj14:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .adbj15:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -540px;
+}
+.nr .jyuiq ul li .adbj16:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj17:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -665px;
+}
+.nr .jyuiq ul li .adbj18:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .adbj19:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -750px;
+}
+.nr .jyuiq ul li .adbj99:hover {color: #FFF;
+	background: url(../images/dhbj3.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj98:hover {color: #FFF;
+	background: url(../images/dhbj2.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .adbj97:hover {color: #FFF;
+	background: url(../images/dhbj2.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .adbj100:hover {color: #FFF;
+	background: url(../images/dhbj2.png) no-repeat 0 -750px;
+}
+
+
+
+
+
+
+.nr .jyuiq ul li .adbj1 {
+	background: url(../images/dhbj.png) no-repeat 0 0;
+}
+.nr .jyuiq ul li .adbj2 {
+	background: url(../images/dhbj.png) no-repeat 0 -35px;
+}
+.nr .jyuiq ul li .adbj3 {
+	background: url(../images/dhbj.png) no-repeat 0 -70px;
+}
+.nr .jyuiq ul li .adbj4 {
+	background: url(../images/dhbj.png) no-repeat 0 -105px;
+}
+.nr .jyuiq ul li .adbj5 {
+	background: url(../images/dhbj.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .adbj6 {
+	background: url(../images/dhbj.png) no-repeat 0 -185px;
+}
+.nr .jyuiq ul li .adbj7 {
+	background: url(../images/dhbj.png) no-repeat 0 -360px;
+}
+.nr .jyuiq ul li .adbj8 {
+	background: url(../images/dhbj.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .adbj9 {
+	background: url(../images/dhbj.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj10 {
+	background: url(../images/dhbj.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .adbj11 {
+	background: url(../images/dhbj.png) no-repeat 0 -407px;
+}
+.nr .jyuiq ul li .adbj12 {
+	background: url(../images/dhbj.png) no-repeat 0 -453px;
+}
+.nr .jyuiq ul li .adbj13 {
+	background: url(../images/dhbj.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .adbj14 {
+	background: url(../images/dhbj.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .adbj15 {
+	background: url(../images/dhbj.png) no-repeat 0 -540px;
+}
+.nr .jyuiq ul li .adbj16 {
+	background: url(../images/dhbj.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj17 {
+	background: url(../images/dhbj.png) no-repeat 0 -665px;
+}
+.nr .jyuiq ul li .adbj18 {
+	background: url(../images/dhbj.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .adbj19 {
+	background: url(../images/dhbj.png) no-repeat 0 -750px;
+}
+.nr .jyuiq ul li .adbj99 {
+	background: url(../images/dhbj.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .adbj98 {
+	background: url(../images/dhbj.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .adbj97 {
+	background: url(../images/dhbj.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .adbj100 {
+	background: url(../images/dhbj.png) no-repeat 0 -750px;
+}
+
+
+.nr .jyuiq ul li .tr1 {
+	background: url(../images/dhbj2.png) no-repeat 0 0;
+}
+.nr .jyuiq ul li .tr2 {
+	background: url(../images/dhbj2.png) no-repeat 0 -35px;
+}
+.nr .jyuiq ul li .tr3 {
+	background: url(../images/dhbj2.png) no-repeat 0 -70px;
+}
+.nr .jyuiq ul li .tr4 {
+	background: url(../images/dhbj2.png) no-repeat 0 -105px;
+}
+
+.nr .jyuiq ul li .tr5 {
+	background: url(../images/dhbj2.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .tr6 {
+	background: url(../images/dhbj2.png) no-repeat 0 -185px;
+}
+.nr .jyuiq ul li .tr7 {
+	background: url(../images/dhbj2.png) no-repeat 0 -360px;
+}
+.nr .jyuiq ul li .tr8 {
+	background: url(../images/dhbj2.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .tr9 {
+	background: url(../images/dhbj2.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .tr10 {
+	background: url(../images/dhbj2.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .tr11 {
+	background: url(../images/dhbj2.png) no-repeat 0 -407px;
+}
+.nr .jyuiq ul li .tr12 {
+	background: url(../images/dhbj2.png) no-repeat 0 -453px;
+}
+.nr .jyuiq ul li .tr13 {
+	background: url(../images/dhbj2.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .tr14 {
+	background: url(../images/dhbj2.png) no-repeat 0 -620px;
+}
+.nr .jyuiq ul li .tr15 {
+	background: url(../images/dhbj2.png) no-repeat 0 -540px;
+}
+.nr .jyuiq ul li .tr16 {
+	background: url(../images/dhbj2.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .tr17 {
+	background: url(../images/dhbj2.png) no-repeat 0 -665px;
+}
+.nr .jyuiq ul li .tr18 {
+	background: url(../images/dhbj2.png) no-repeat 0 -710px;
+}
+.nr .jyuiq ul li .tr19 {
+	background: url(../images/dhbj2.png) no-repeat 0 -750px;
+}
+.nr .jyuiq ul li .tr99 {
+	background: url(../images/dhbj2.png) no-repeat 0 -575px;
+}
+.nr .jyuiq ul li .tr98 {
+	background: url(../images/dhbj2.png) no-repeat 0 -493px;
+}
+.nr .jyuiq ul li .tr97 {
+	background: url(../images/dhbj2.png) no-repeat 0 -310px;
+}
+.nr .jyuiq ul li .tr100 {
+	background: url(../images/dhbj2.png) no-repeat 0 -750px;
+}
+
+.nr .jyuiq ul li .iui {
+	width: 100%;
+	font-size: 12px;
+	color: #ffffff;
+	border-bottom: 1px solid #DDDDDD;
+	font-weight: bold;
+}
+.nr .jyuiq ul li.active ul li a:hover {
+	color: #ffffff;
+	background: #4e98e5;
+}
+
+.nr .jyuiq ul li.active ul {
+	width: 100%;
+	background: #ffffff;
+	float: left;
+}
+.nr .jyuiq ul li.active ul li {
+	height: 25px;
+	line-height: 25px;
+	padding: 6px;
+	padding-left: 50px;
+}
+.nr .jyuiq ul li.active ul a {
+	font-size: 12px;
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 0px 5px;
+	color: #474b52;
+	float:left;
+}
+.sub-menu
+{
+	display:none;
+}
+
+.menunotice
+{
+	margin-top:20px;
+	background: none repeat scroll 0 0 #fff;
+    border-bottom: 1px solid #d9dadc;
+    border-left: 1px solid #d9dadc;
+    border-right: 1px solid #d9dadc;
+    border-top: 1px solid #d9dadc;
+    float: left;
+    height: auto;
+    width: 185px;
+    border-radius:5px;
+}
+.noticecontent
+{
+	padding:5px;
+}
+.noticecontent li
+{
+	padding:5px;
+}
+.spancolor
+{
+	color:#ff3333;
+}
+.spana
+{
+	color:#0066ff;
+}
+.smsopen
+{
+	color:#B3B3B3; 
+	font-weight:bold; 
+	font-family:Verdana,Arial,Helvetica,sans-serif; 
+	float:right; 
+	margin-right:10px; 
+	cursor:pointer;
+}
+.active{
+	background: rgb(78, 152, 229) none repeat scroll 0 0;
+	color: rgb(255, 255, 255);
+    }

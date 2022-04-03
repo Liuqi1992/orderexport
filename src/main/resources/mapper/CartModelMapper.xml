@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.order.dao.CartModelMapper" >
+  <resultMap id="BaseResultMap" type="com.order.model.CartModel" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="package_id" property="packageId" jdbcType="BIGINT" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <!--<resultMap id="RelatedResultMap" type="com.order.model.CartModel" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="package_id" property="packageId" jdbcType="BIGINT" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <collection property="userModel" javaType="com.order.model.UserModel">
+      <id column="u_id" property="id" jdbcType="BIGINT"></id>
+      <result column="u_user_name" property="userName" jdbcType="VARCHAR"></result>
+      <result column="u_name" property="name" jdbcType="VARCHAR"></result>
+    </collection>
+    <collection property="packageModel" javaType="com.order.model.PackageModel">
+      <id column="p_id" property="id" jdbcType="BIGINT"></id>
+      <result column="p_name" property="name" jdbcType="VARCHAR"></result>
+    </collection>
+  </resultMap>-->
+  <sql id="Base_Column_List" >
+    id, user_id, package_id, num, create_time, modify_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_c_cart
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from app_c_cart
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.order.model.CartModel" >
+    insert into app_c_cart (id, user_id, package_id, 
+      num, create_time, modify_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{packageId,jdbcType=BIGINT}, 
+      #{num,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.order.model.CartModel" >
+    insert into app_c_cart
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="packageId != null" >
+        package_id,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="packageId != null" >
+        #{packageId,jdbcType=BIGINT},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.order.model.CartModel" >
+    update app_c_cart
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="packageId != null" >
+        package_id = #{packageId,jdbcType=BIGINT},
+      </if>
+      <if test="num != null" >
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.order.model.CartModel" >
+    update app_c_cart
+    set user_id = #{userId,jdbcType=BIGINT},
+      package_id = #{packageId,jdbcType=BIGINT},
+      num = #{num,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectList" parameterType="java.util.Map" resultMap="RelatedResultMap">
+    select
+    c.id, user_id, package_id, num, c.create_time, c.modify_time,
+    u.user_name u_user_name, u.name u_name,
+    p.name p_name
+    from (app_c_cart c left join app_c_user u on c.user_id = u.id) left join app_c_package p on c.package_id = p.id
+    where 1 = 1
+    <if test="id != null">
+      and c.id = #{id, jdbcType=BIGINT}
+    </if>
+    <if test="userId != null">
+      and c.user_id = #{userId, jdbcType=BIGINT}
+    </if>
+    <if test="packageId != null">
+      and c.package_id = #{packageId, jdbcType=BIGINT}
+    </if>
+    <if test="num != null">
+      and c.num = #{num, jdbcType=Integer}
+    </if>
+    <if test="user_username != null and user_username != ''">
+      and u.user_name = #{user_username, jdbcType = VARCHAR}
+    </if>
+    <if test="user_name != null and user_name != ''">
+      and u.name = #{user_name, jdbcType = VARCHAR}
+    </if>
+    <if test="package_name != null and package_name != ''">
+      and p.name = #{package_name, jdbcType = VARCHAR}
+    </if>
+    <if test="create_time_start != null">
+      AND c.create_time &gt;= #{create_time_start, jdbcType=TIMESTAMP}
+    </if>
+    <if test="create_time_end != null">
+      AND c.create_time &lt;= #{create_time_end, jdbcType=TIMESTAMP}
+    </if>
+    <if test="start_num != null and pageSize != null">
+      limit #{start_num, jdbcType=INTEGER}, #{pageSize, jdbcType=INTEGER}
+    </if>
+  </select>
+</mapper>

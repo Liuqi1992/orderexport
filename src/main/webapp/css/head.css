@@ -1,0 +1,250 @@
+ @charset "utf-8";
+/* CSS Document */
+
+img {
+	border: none;
+}
+ul, li {
+	list-style: none;
+}
+a {
+	color: #666666;
+	text-decoration: none;
+}
+a:hover a:focus
+{
+	text-decoration: none;
+}
+body {
+	background: #f6f1eb;
+}
+.lf {
+	float: left;
+}
+.rh {
+	float: right;
+}
+.wk {
+	float: left;
+	position: fixed;
+	min-width: 1000px;
+	width: 100%;
+	z-index: 1000;
+	height: 58px;
+}
+.wk .dh {
+	width: 100%;
+	height: 58px;
+	background: url(../images/dh-bj.png) repeat-x;
+}
+.logo {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	margin-top: 5px;
+	height: 45px;
+	width: 200px;
+	/* background: url(https://img.alicdn.com/imgextra/i2/2571152561/TB2F0nshFXXXXaDXXXXXXXXXXXX_!!2571152561-2-tae.png) no-repeat; */
+}
+.nav_cont {
+	margin: 0 auto;
+	width: 1200px;
+}
+.nav {
+	float: left;
+	position: relative;
+	font-size: 15px;
+	width: 730px;
+}
+.nav .current {
+	background: #207dd1;
+}
+.nav li {
+	border-left: 1px solid #2078C7;
+	float: left;
+	width: 90px;
+}
+.nav .frgi {
+	border-right: 1px solid #2078C7;
+}
+.nav a {
+	color: #FFFFFF;
+	font-size: 14px;
+	display: inline-block;
+	float: left;
+	font-weight: normal;
+	height: 50px;
+	line-height: 49px;
+	text-align: center;
+	text-decoration: none;
+	width: 90px;
+}
+.nav a:hover {
+	background: #348dde;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.hyu {
+	float: right;
+	position: relative;
+}
+.hyu_span {
+	line-height: 52px;
+	position: relative;
+	color: #badaf6;
+	margin-right: 15px;
+	float: left;
+}
+.hyu_a {
+	display: block;
+	height: 49px;
+	left: 200px;
+	top: -184px;
+	text-indent: 15px;
+	line-height: 49px;
+	color: #badaf6;
+	float: left;
+}
+.hyu_p {
+	float: left;
+	position: relative;
+	cursor: pointer;
+	
+	color: #badaf6;
+	overflow: hidden;
+	line-height: 49px;
+	margin-right: 15px;
+	width: 100px;
+	text-align: center;
+}
+.dbf {
+	width: 100%;
+	float: left;
+	margin-top: 35px;
+	border-top: 1px solid #d8d7d7;
+	line-height: 76px;
+	text-align: center;
+}
+.rth1 {
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: #333333;
+	font-weight: bold;
+	text-indent: 26px;
+	line-height: 41px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.hyu b {
+    background: url("../images/tle.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 12px;
+    margin-left: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in 0s;
+    vertical-align: middle;
+    width: 16px;
+    cursor:pointer;
+}
+
+.hyu:hover b {
+    transform:rotate(180deg);
+    cursor:pointer;
+}
+
+.hyucolor
+{
+	color:#badaf6;
+	cursor:pointer;
+}
+
+.contentheads {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    color: #888;
+    text-align: center;
+    display:none;
+    z-index:9999;
+    position:absolute;
+    margin-left:1000px;
+    margin-top:52px;
+    height:200px;
+    width:300px;
+}
+
+
+.contentheads li
+{
+	height:30px;line-height:30px;margin-left:20px;
+	text-align:left;
+}
+
+ .arrow:before {
+    border-color: transparent transparent #c8c8c8;
+    border-style: solid;
+    border-width: 6px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 1;
+}
+
+.exit {
+    color: #888;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.headrth1 {
+    border-bottom: 1px solid #e7e7e7;
+    color: #333333;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 41px;
+    text-indent: 20px;
+    text-align:left;
+    width: 100%;
+}
+
+.ui-no-rate {
+    background: rgba(0, 0, 0, 0) url("https://img.alicdn.com/tps/i2/T1F_S9XXpuXXXXXXXX-129-78.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 12px !important;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: left;
+    vertical-align: middle;
+    width: 60px;
+}
+.img {
+    background-size: 60px 60px;
+    float: left;
+    height: 58px;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 58px;
+}
+.ui-icon-radius {
+    background-size: 80px 80px;
+    border-radius: 8px;
+    height: 78px;
+    line-height: 21px;
+    position: relative;
+    width: 78px;
+}
+/*
+.nr .ddgh .bke li p, a {
+	float: left;
+}
+*/

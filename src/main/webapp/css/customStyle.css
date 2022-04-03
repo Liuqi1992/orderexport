@@ -1,0 +1,82 @@
+.po{
+    position: relative;
+}
+
+.pagestyle{
+    position: absolute;
+    bottom: 26px;
+    width: 100%
+}
+
+.label_Style{
+    font-size: small;
+    color: #0C0C0C;
+}
+.input_text_style{
+    width: 120px;
+    height: 26px
+}
+.input_text_style_new{
+    width: 100px;
+    height: 26px
+}
+.select_style{
+    width: 120px;
+    height: 30px
+}
+.page_num_style{
+    font-size: small;
+    position: fixed;
+    left: 400px;
+    top: 600px;
+    right: 200px
+}
+.aa{
+    height:38px;
+    line-height:38px;
+    line-height:36px\9;
+    border:1px solid #e6e6e6;
+    background-color:#fff;
+    border-radius:2px;
+    display:block;
+    width:100%;
+    padding-left:10px
+}
+.line_limit{
+    word-break: break-all;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /*white-space: nowrap;*/
+
+}
+
+.line_limit_one{
+    word-break: break-all;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /*white-space: nowrap;*/
+
+}
+/*
+.line_limit{
+    position:relative;
+    line-height:1.4em;
+    /!* 3 times the line-height to show 3 lines *!/
+    height:4.2em;
+    overflow:hidden;
+}
+.line_limit:after {
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+    background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+}*/

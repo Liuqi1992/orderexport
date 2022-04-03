@@ -1,0 +1,17 @@
+ 
+  @charset "utf-8";
+/* CSS Document */
+ *{margin:0px;padding:0px;}
+        .checkbox,.radio{display: inline-block;*display: inline;*zoom:1;height: 24px; line-height: 24px;}
+        .checkbox ins,.radio ins{display: inline-block;*display: inline;*zoom:1; width: 19px; height: 18px; vertical-align: middle; background: url(/images/common1.png) no-repeat; margin-right: 8px; vertical-align: middle;}
+        .checkbox ins{background-position: 0px -3px; }
+        .radio ins{background-position: 0px -172px; }
+        .checkbox .hover{background-position: 0px -1px; }
+        .checkbox .checked{background-position: 0px -35px; }
+        .checkbox .enable{background-position: 0px -100px;}
+        .checkbox .disabled{background-position: 0px -68px;cursor: not-allowed;}
+        .radio .hover{background-position: -182px -1px;}
+        .radio .checked{background-position: 0px -135px;}
+        .radio .enable{background-position: 0px -209px;}
+        .radio .disabled{background-position: 0px -245px;}
+        .checkbox span,.radio span{display: inline-block;*display: inline;*zoom:1;vertical-align: middle; }
